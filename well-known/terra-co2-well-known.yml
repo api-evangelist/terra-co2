@@ -1,0 +1,35 @@
+generated: '2026-08-30'
+method: probed
+source: https://terraco2.com/.well-known/
+note: >-
+  Every /.well-known/ path was probed on the one host Terra CO2 operates
+  (terraco2.com). All five returned HTTP 404 rendered as the site's WordPress
+  404 template (text/html, 25,217 bytes) rather than a document, so NO
+  WellKnown or SecurityTxt pointer is emitted in apis.yml — this file records a
+  verified absence, not a served surface. The site does publish a real
+  /llms.txt (HTTP 200, Yoast-generated), captured separately in
+  llms/terra-co2-llms.txt.
+hosts:
+- host: terraco2.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

@@ -1,17 +1,38 @@
 aid: terra-co2
 name: Terra CO2
-description: 'Terra CO2 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Terra CO2 Technology is a Golden, Colorado climate-technology and building-materials
+  manufacturer that produces low-carbon replacements for Portland cement. Its commercial
+  product, OPUS SCM, is a supplementary cementitious material that replaces up to 50% of
+  the Portland cement in a concrete mix as a drop-in substitute for legacy SCMs such as
+  fly ash, cutting CO2 by roughly 70% and NOx by roughly 90% per ton replaced, and it is
+  produced from abundant silicate feedstocks rather than coal-plant by-products. A second
+  product, OPUS ZERO, targets a full zero-carbon cement replacement and is in concrete
+  trials. The company runs a pilot and materials R&D facility in Golden and is building a
+  240,000-ton-per-year commercial plant in Cleburne, Texas, backed by more than $250M
+  raised from climate and construction investors including Cemex Ventures. Terra CO2
+  sells physical material into the construction supply chain; it publishes no developer
+  program, no public API, and no machine-readable API contract.
+image: https://terraco2.com/wp-content/uploads/2026/05/logo-header.svg
 url: https://raw.githubusercontent.com/api-evangelist/terra-co2/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enriched
 specificationVersion: '0.20'
 created: '2026-08-30'
 modified: '2026-08-30'
 tags:
 - Company
+- Building Materials
+- Construction
+- Cement
+- Concrete
+- Climate Tech
+- Carbon Reduction
+- Sustainability
+- Manufacturing
+- Materials Science
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,43 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/terra-co2-domain-security.yml
 - type: Website
+  url: https://terraco2.com/
+- type: About
+  url: https://terraco2.com/about/
+- type: Support
+  url: https://terraco2.com/contact/
+- type: PrivacyPolicy
+  url: https://terraco2.com/privacy-policy/
+- type: TermsOfService
+  url: https://terraco2.com/terms/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/terra-co2-technology
+- type: SecondaryMarketListing
   url: https://forgeglobal.com/terra-co2_stock/
+- type: LLMsTxt
+  url: llms/terra-co2-llms.txt
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Terra CO2 Technology manufactures and sells a physical product - OPUS SCM and
+    OPUS ZERO cement replacements shipped by the ton into concrete plants - so there
+    is no software product to expose; terraco2.com is a WordPress marketing site with
+    no developer portal, no api/developer/docs subdomain resolving in DNS, and no
+    published OpenAPI, GraphQL, MCP or agent card.
+  evidence:
+  - url: https://terraco2.com/openapi.json
+    status: 404
+  - url: https://terraco2.com/.well-known/agent-card.json
+    status: 404
+  - url: https://terraco2.com/llms.txt
+    status: 200
+  checked: '2026-08-30'

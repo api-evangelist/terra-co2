@@ -1,0 +1,79 @@
+generated: '2026-08-30'
+method: probed
+source: https://terraco2.com/
+note: >-
+  STEP 0b contract discovery log. Terra CO2 Technology is a building-materials
+  manufacturer (OPUS SCM / OPUS ZERO cement replacements, Golden CO) with no
+  developer program, no API subdomain, and no published machine-readable API
+  contract. Recorded here so a later round does not re-litigate the same
+  probes. IMPORTANT DISAMBIGUATION - the "Terra API" published at
+  tryterra.co / docs.tryterra.co is a DIFFERENT company (wearable and health
+  data aggregation) that merely shares the word "Terra". Its OpenAPI must never
+  be attached to this repo.
+hosts_probed:
+- terraco2.com
+- api.terraco2.com
+- developer.terraco2.com
+- docs.terraco2.com
+- app.terraco2.com
+- status.terraco2.com
+- trust.terraco2.com
+probes:
+- url: https://terraco2.com/openapi.json
+  status: 404
+  result: WordPress 404 HTML template, not a spec
+- url: https://terraco2.com/swagger.json
+  status: 404
+  result: WordPress 404 HTML template, not a spec
+- url: https://terraco2.com/api-docs
+  status: 404
+  result: WordPress 404 HTML template
+- url: https://terraco2.com/docs
+  status: 404
+  result: WordPress 404 HTML template
+- url: https://terraco2.com/graphql
+  status: 404
+  result: no GraphQL surface; introspection not attempted
+- url: https://api.terraco2.com/
+  status: null
+  result: DNS does not resolve (curl exit 6, no response)
+- url: https://developer.terraco2.com/
+  status: null
+  result: DNS does not resolve (curl exit 6, no response)
+- url: https://docs.terraco2.com/
+  status: null
+  result: DNS does not resolve (curl exit 6, no response)
+- url: https://app.terraco2.com/
+  status: null
+  result: DNS does not resolve (curl exit 6, no response)
+- url: https://status.terraco2.com/
+  status: null
+  result: DNS does not resolve (curl exit 6, no response)
+- url: https://trust.terraco2.com/
+  status: null
+  result: DNS does not resolve (curl exit 6, no response)
+- url: https://terraco2.com/wp-json/
+  status: 200
+  result: >-
+    WordPress core REST API discovery index - 297 routes across 11 namespaces
+    (wp/v2, oembed/1.0, yoast/v1, google-site-kit/v1, wordfence/v1, gbm,
+    wp-abilities/v1, wp-site-health/v1, wp-block-editor/v1,
+    duplicate-post/v1, wordfence-login-security/v1). This is the CMS behind the
+    marketing site, auto-enabled by WordPress - it is not a product API, is not
+    documented, marketed or supported by Terra CO2, and carries no OpenAPI.
+    Recorded as an honest observation only; deliberately NOT registered as an
+    apis[] entry, because doing so would credit the company with shipping an
+    API it does not sell.
+- url: https://terraco2.com/llms.txt
+  status: 200
+  result: real llms.txt served (Yoast SEO v28.1), saved verbatim
+findings:
+  openapi: none
+  swagger: none
+  graphql: none
+  asyncapi: none
+  grpc_protobuf: none
+  wsdl: none
+  mcp_server: none
+  agent_card: none
+  llms_txt: present
