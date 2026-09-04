@@ -13,6 +13,18 @@ description: >-
   raised from climate and construction investors including Cemex Ventures. Terra CO2
   sells physical material into the construction supply chain; it publishes no developer
   program, no public API, and no machine-readable API contract.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://terraco2.com/wp-content/uploads/2026/05/logo-header.svg
 url: https://raw.githubusercontent.com/api-evangelist/terra-co2/refs/heads/main/apis.yml
 x-type: company
